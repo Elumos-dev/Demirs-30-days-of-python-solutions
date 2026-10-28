@@ -61,6 +61,8 @@ print(area)
 rad_circle = float(input("Enter radius of a circle"))
 circum_rad = 2 * 3.14 * rad_circle
 print(circum_rad)
+area_circle = 3.14 * rad_circle * rad_circle
+print(area_circle)
 
 # Day 3 – Exercise Q8:
 # Calculate the slope, x-intercept and y-intercept of y = 2x -2
@@ -85,17 +87,17 @@ print(slope == slope_points)
 # Day 3 – Exercise Q11:
 # Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out
 # at what x value y is going to be 0.
-print((-3)^2 + 6(-3) + 9)
+print((-3)**2 + 6*(-3) + 9)
 
 # Day 3 – Exercise Q12:
 # Find the length of 'python' and 'dragon' and make a falsy comparison statement.
 word1 = "python"
+word2 = "dragon"
+
 print(len(word1) != len(word2))
 
-word2 = "dragon"
 print(len(word2))
-if (word1 == word2):
-    print("The words are the same length")
+
 # Day 3 – Exercise Q13:
 # Use and operator to check if 'on' is found in both 'python' and 'dragon'
 if ("on" in word1) and ("on" in word2):
@@ -138,7 +140,7 @@ print(type('10') == type(10))
 # Day 3 – Exercise Q20:
 # Check if int('9.8') is equal to 10
 #print(int(('9.8')) == 10)
-#can convert '9.8'
+#cant convert '9.8'
 
 # Day 3 – Exercise Q21:
 # Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
