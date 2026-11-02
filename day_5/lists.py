@@ -58,7 +58,7 @@ it_companies.append("Anthropic")
 
 # Day 5 – Exercise Level 1, Q12:
 # Insert an IT company in the middle of the companies list
-it_companies.insert(3,"OpenAI")
+it_companies.insert(len(it_companies)//2,"OpenAI")
 print(it_companies)
 
 # Day 5 – Exercise Level 1, Q13:
@@ -68,7 +68,7 @@ print(it_companies)
 
 # Day 5 – Exercise Level 1, Q14:
 # Join the it_companies with a string '#;  '
-sentence = "#; ".join(it_companies)
+sentence = "#;  ".join(it_companies)
 print(sentence)
 
 # Day 5 – Exercise Level 1, Q15:
@@ -109,7 +109,8 @@ print(it_companies)
 
 # Day 5 – Exercise Level 1, Q22:
 # Remove the middle IT company or companies from the list
-it_companies.pop(hero)
+mid = len(it_companies)//2
+del it_companies[mid-1:mid+1]
 print(it_companies)
 
 # Day 5 – Exercise Level 1, Q23:
@@ -153,13 +154,17 @@ ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 #   - Find the range of the ages (max minus min)
 #   - Compare the value of (min - average) and (max - average), use abs() method
 import statistics
+ages.sort()
 lowest = min(ages)
 highest = max(ages)
+ages.extend([lowest, highest])
 median = statistics.median(ages)
 average_sum = sum(ages) / len(ages)
 age_range = highest-lowest
 min_diff= abs(lowest-average_sum)
 max_diff = abs(highest-average_sum)
+print(ages, lowest, highest, median, average_sum, age_range)
+print(min_diff > max_diff)
 
 # Day 5 – Exercise Level 2, Q2:
 # Find the middle country(ies) in the countries list
